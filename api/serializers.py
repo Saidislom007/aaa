@@ -33,6 +33,10 @@ class MaqolaSerializer(serializers.ModelSerializer):
         model = Maqola
         fields = '__all__'
 
+class AboutmoqolaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Conference
+        fields = 'title'
 
 
 class ShobaSerializer(serializers.ModelSerializer):
@@ -50,6 +54,7 @@ class ConferenceSerializer(serializers.ModelSerializer):
     word_parts = WordPartSerializer(many=True, read_only=True)
     shobalar = ShobaSerializer(many=True, read_only=True)
 
-    class Meta:
-        model = Conference
-        fields = '__all__'
+
+    
+    model = Conference
+    fields = '__all__'

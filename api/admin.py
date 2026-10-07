@@ -85,7 +85,6 @@ class AboutMaqolaInline(admin.TabularInline):
 
     fields = (
         'muallif',
-        'konfrensiya',
         'word_bet',
         'word_fayl',
         'yaratilgan_sana',
@@ -93,9 +92,9 @@ class AboutMaqolaInline(admin.TabularInline):
     )
 
     readonly_fields = (
-        'title',
         'yaratilgan_sana',
         'yangilanish',
+        
     )
 
     show_change_link = True

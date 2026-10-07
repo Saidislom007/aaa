@@ -102,13 +102,8 @@ class AboutMaqola(models.Model):
         on_delete=models.CASCADE,
         related_name='about_maqolalar'
     )
-    shoba_malumot = models.ForeignKey(
-            Shoba,
-            on_delete=models.CASCADE,
-            related_name='shoba_malumot'
-    )
+    
     muallif = models.CharField(max_length=255)
-    konfrensiya = models.TextField()
     yaratilgan_sana = models.DateTimeField(auto_now_add=True)
     yangilanish = models.DateTimeField(auto_now=True)
     word_bet = models.IntegerField(default=0)
