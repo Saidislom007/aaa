@@ -7,8 +7,7 @@ from .text_from_img import ImageToText  # ImageToText classi joylashgan faylingi
 
 @receiver(post_save, sender=WordPart)
 def extract_content_from_word_file(sender, instance, created, **kwargs):
-    """WordPart saqlanganda word_fayl dan matnni ajratib olib, content field'iga yozadi."""
-    
+
     # Agar fayl mavjud bo'lsa va content hali to'ldirilmagan bo'lsa (yoki yangilanishi kerak bo'lsa)
     if instance.word_fayl and not instance.content:
         file_path = instance.word_fayl.path

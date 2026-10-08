@@ -2,7 +2,6 @@ from django.contrib import admin
 from .models import (
     AboutMaqola,
     Conference,
-    User,
     Shoba,
     Maqola,
     AboutShoba,
@@ -10,7 +9,7 @@ from .models import (
 )
 
 
-admin.site.register(User)
+
 
 # ========================================================
 class WordPartInline(admin.TabularInline):

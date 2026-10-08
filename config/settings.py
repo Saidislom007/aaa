@@ -98,7 +98,7 @@ MEDIA_URL = '/media/'
 
 STATIC_URL = '/static/'
 
-AUTH_USER_MODEL = 'api.User'
+
 
 
 MAILERS = {
