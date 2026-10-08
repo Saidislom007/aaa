@@ -12,6 +12,10 @@ from .views import (
     GetWordPart,
     GetOneWordPart,
     DownloadConferenceWordFileView,
+    RegisterView,
+    LoginView,
+    LogoutView,
+    MeView,
 
 )
 
@@ -24,11 +28,36 @@ urlpatterns = [
         name='conference-list'
     ),
 
+
     path(
         'conferences/<int:id>/',
         GetOneConference.as_view(),
         name='conference-detail'
     ),
+
+    path(
+        'login/' ,
+        LoginView.as_view(),
+        name = 'login-list'
+    ),
+
+
+
+    path(
+        'logout/' ,
+        LogoutView.as_view(),
+        name = 'logout-list'
+    ),
+
+
+
+    path(
+        'register/' ,
+        RegisterView.as_view(),
+        name = 'register-list'
+    ),
+
+
 
     path(
         'shobalar/',
