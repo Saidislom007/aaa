@@ -5,7 +5,7 @@ from .models import (
     Maqola,
     AboutShoba,
     Shoba,
-    WordPart
+    WordPart,
 )
 
 from .serializers import (
@@ -14,8 +14,13 @@ from .serializers import (
     MaqolaSerializer,
     WordPartSerializer,
     ShobaSerializer,
-    DownloadConferenceWordFileSerializer
+    DownloadConferenceWordFileSerializer,
 )
+
+
+
+
+
 
 
 class GetConference(generics.ListAPIView):

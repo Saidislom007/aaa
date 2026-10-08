@@ -2,12 +2,15 @@ from django.contrib import admin
 from .models import (
     AboutMaqola,
     Conference,
+    User,
     Shoba,
     Maqola,
     AboutShoba,
     WordPart
 )
 
+
+admin.site.register(User)
 
 # ========================================================
 class WordPartInline(admin.TabularInline):
@@ -186,3 +189,5 @@ class ConferenceAdmin(admin.ModelAdmin):
         if not obj:
             return {'slug': ('title',)}
         return {}
+
+

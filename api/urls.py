@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path , include
 
 from .views import (
     GetConference,
@@ -11,7 +11,9 @@ from .views import (
     GetOneShoba,
     GetWordPart,
     GetOneWordPart,
-    DownloadConferenceWordFileView
+    DownloadConferenceWordFileView,
+    GetOneUser,
+    GetUser
 )
 
 
@@ -21,6 +23,19 @@ urlpatterns = [
         'conferences/',
         GetConference.as_view(),
         name='conference-list'
+    ),
+
+
+    path(
+        'register/',
+        GetUser.as_view(),
+        name = 'register-list'
+    ),
+
+    path(
+        'register/<int:id>',
+        GetOneUser.as_view,
+        name = 'register-detail'
     ),
 
     path(

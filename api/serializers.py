@@ -4,7 +4,8 @@ from .models import (
     WordPart,
     Shoba,
     Maqola,
-    AboutShoba
+    AboutShoba,
+    User
 )
 
 
@@ -14,6 +15,18 @@ class DownloadConferenceWordFileSerializer(serializers.ModelSerializer):
         fields = ['word_fayl']
 
 
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = [
+            'id',
+            'username',
+            'first_name',
+            'last_name',
+            'email',
+
+            ] 
 
 
 class WordPartSerializer(serializers.ModelSerializer):
